@@ -33,7 +33,7 @@ def listm():
 
 file = open('movies.json', 'r')
 watchlist = json.load(file)
-watchlist = list(set(watchlist))
+watchlist = sorted(list(set(watchlist)))
 file.close()
 
 parser = argparse.ArgumentParser(description='Watchlist')
